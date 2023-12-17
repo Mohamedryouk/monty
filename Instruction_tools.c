@@ -78,8 +78,21 @@ void getFunc(char *opcode, char *value, int ln, int format)
 	instruction_t func_list[] = {
 		{"push", push_to_stack},
 		{"pall", pall_the_stack},
+		{"pint", pop_print},
+		{"pop", pop},
+		{"nop", nop},
+		{"swap", swap},
+		{"add", addNodes},
+		{"sub", subNodes},
+		{"div", dvNodes},
+		{"mul", mulNodes},
+		{"mod", modNodes},
+    	{"pchar", print_char},
+		{"pstr", print_str},
+		{"rotl", rotl},
+		{"rotr", rotr},
 		{NULL, NULL}
-	};
+        };
 
 	if (opcode[0] == '#')
 		return;

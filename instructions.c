@@ -37,3 +37,34 @@ void pall_the_stack(stack_t **stack, __attribute__((unused))unsigned int line_nu
 		pointer = pointer->next;
 	}
 }
+
+/**
+ * pop_top - pop a node.
+ * @stack: Pointer to a pointer.
+ * @line_number: line_number integer.
+ */
+void pop(stack_t **stack, unsigned int line_number)
+{
+        stack_t *ptr;
+
+        if (stack == NULL || *stack == NULL)
+                more_err(7, line_number);
+
+        ptr = *stack;
+        *stack = ptr->next;
+        if (*stack != NULL)
+                (*stack)->prev = NULL;
+        free(ptr);
+}
+
+/**
+ * print_top - Prints the top node of the stack.
+ * @stack: Pointer to a pointer pointing to top node of the stack.
+ * @line_number: Interger representing the line number of of the opcode.
+ */
+void pop_print(stack_t **stack, unsigned int line_number)
+{
+        if (stack == NULL || *stack == NULL)
+                	more_err(6, line_number);
+		printf("%d\n", (*stack)->n);
+}

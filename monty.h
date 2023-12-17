@@ -58,17 +58,17 @@ void add_to_queue(stack_t **, unsigned int);
 
 void functionCall(op_func, char *, char *, int, int);
 
-void print_top(stack_t **, unsigned int);
-void pop_top(stack_t **, unsigned int);
+void pop_print(stack_t **, unsigned int); 
+void pop(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
-void swap_nodes(stack_t **, unsigned int);
+void swap(stack_t **, unsigned int);
 
-/*Math operations with nodes*/
-void add_nodes(stack_t **, unsigned int);
-void sub_nodes(stack_t **, unsigned int);
-void div_nodes(stack_t **, unsigned int);
-void mul_nodes(stack_t **, unsigned int);
-void mod_nodes(stack_t **, unsigned int);
+/*operations*/
+void addNodes(stack_t **, unsigned int);
+void subNodes(stack_t **, unsigned int);
+void dvNodes(stack_t **, unsigned int);
+void mulNodes(stack_t **, unsigned int);
+void modNodes(stack_t **, unsigned int);
 
 /*String operations*/
 void print_char(stack_t **, unsigned int);
